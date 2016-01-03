@@ -52,4 +52,4 @@ for k in range(len(measurements)):
     p= move(p, motions[1])
     print p
 
-#print p         
+#print p  
