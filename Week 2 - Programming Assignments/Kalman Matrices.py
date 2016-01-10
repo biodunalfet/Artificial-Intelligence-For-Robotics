@@ -147,16 +147,16 @@ def kalman_filter(x, P):
         # measurement update
         z= matrix([[]])
         z.identity(1, measurements[n])
-        Hx= H.__mul__(x)
-        y= z.__sub__(Hx)
-        S= (H.__mul__(P).__mul__(H.transpose())).__add__(R)
-        K= P.__mul__(H.transpose()).__mul__(S.inverse())
-        Ky= K.__mul__(y)
-        x= x.__add__(Ky)
-        KH= K.__mul__(H)
+        Hx= H * x
+        y= z - Hx
+        S= H * P *  H.transpose() + R
+        K= P * H.transpose() * S.inverse()
+        Ky= K * y
+        x= x + Ky
+        KH= K * H
         one= matrix([[]])
         one.identity(KH.dimx,1)
-        P= (one.__sub__(KH)).__mul__(P)
+        P= (one - KH) * P
 
         #print "After measurement " + str(n)
         #print "x:"
@@ -166,8 +166,8 @@ def kalman_filter(x, P):
         
 
         # prediction
-        x= F.__mul__(x).__add__(u)
-        P= F.__mul__(P.__mul__(F.transpose()))
+        x= F * x + u
+        P= F * P * F.transpose()
 
         #print "After prediction " + str(n)
         #print "x:"
