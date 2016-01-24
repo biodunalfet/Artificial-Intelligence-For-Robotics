@@ -41,45 +41,45 @@ closed_cells = []
 smallest = 0
 
 
-def getSmallestGValue(open_cells):
+# def getSmallestGValue(open_cells):
     
-    if (len(open_cells) == 0):
-        return -1
-    else:
-        #get list of g-Values
-        gValue_list = [item[0] for item in open_cells]
-        #get the index of the smallest g-Value
-        index_smallest_cell = gValue_list.index(min(gValue_list))
-        #get the smallest cell (g-Value) and delete from list of open cells
-        smallest_cell = open_cells.pop(index_smallest_cell)
-        #add cell to closed closed_cells
-        closed_cells.append(smallest_cell)
-        #print smallest_cell
-        #print "picked " + str(smallest_cell)
-        return smallest_cell
+#     if (len(open_cells) == 0):
+#         return -1
+#     else:
+#         #get list of g-Values
+#         gValue_list = [item[0] for item in open_cells]
+#         #get the index of the smallest g-Value
+#         index_smallest_cell = gValue_list.index(min(gValue_list))
+#         #get the smallest cell (g-Value) and delete from list of open cells
+#         smallest_cell = open_cells.pop(index_smallest_cell)
+#         #add cell to closed closed_cells
+#         closed_cells.append(smallest_cell)
+#         #print smallest_cell
+#         #print "picked " + str(smallest_cell)
+#         return smallest_cell
     
-def createExpansion(cell):
-    row = cell[1][0]
-    col = cell[1][1]
-    gValue = cell[0]
+# def createExpansion(cell):
+#     row = cell[1][0]
+#     col = cell[1][1]
+#     gValue = cell[0]
     
-    postionClosedCells = [item[1] for item in closed_cells]
-    maxrow = len(grid) - 1
-    maxcol = len(grid[0]) - 1
+#     postionClosedCells = [item[1] for item in closed_cells]
+#     maxrow = len(grid) - 1
+#     maxcol = len(grid[0]) - 1
     
-    for i in range(0, len(delta)):
-        x_new = row + delta[i][0]
-        y_new = col + delta[i][1]
+#     for i in range(0, len(delta)):
+#         x_new = row + delta[i][0]
+#         y_new = col + delta[i][1]
         
         
-        #valid position
-        if ((x_new >= 0 and x_new <= maxrow) and (y_new >= 0 and y_new <= maxcol)):
-            #check if closed/open
-            #print x_new
-            #print y_new
-            if ([x_new, y_new] not in postionClosedCells): 
-                if ((grid[x_new][y_new] == 0)):
-                    open_cells.append([gValue + 1, [x_new, y_new]])
+#         #valid position
+#         if ((x_new >= 0 and x_new <= maxrow) and (y_new >= 0 and y_new <= maxcol)):
+#             #check if closed/open
+#             #print x_new
+#             #print y_new
+#             if ([x_new, y_new] not in postionClosedCells): 
+#                 if ((grid[x_new][y_new] == 0)):
+#                     open_cells.append([gValue + 1, [x_new, y_new]])
     
 
 def search():
