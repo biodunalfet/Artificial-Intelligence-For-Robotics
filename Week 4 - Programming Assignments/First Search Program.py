@@ -130,6 +130,7 @@ def search():
             if ((x_new >= 0 and x_new <= maxrow) and (y_new >= 0 and y_new <= maxcol)):
                 if ([x_new, y_new] not in postionClosedCells): 
                     if ((grid[x_new][y_new] == 0)):
+                        #print [gValue + 1, [x_new, y_new]]
                         open_cells.append([gValue + 1, [x_new, y_new]])
           
     return path

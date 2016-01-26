@@ -74,5 +74,9 @@ def search(grid,init,goal,cost):
                             #expand[x2][y2] = -1
     return expand
 
-print search(grid,init,goal,cost)
+#print search(grid,init,goal,cost)
     
+x = search(grid,init,goal,cost)
+
+for i in range(len(x)):
+    print x[i]
