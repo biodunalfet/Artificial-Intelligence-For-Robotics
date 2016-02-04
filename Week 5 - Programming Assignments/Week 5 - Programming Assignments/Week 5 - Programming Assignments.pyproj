@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>152658ea-97a3-4914-988a-6c14fd7f06bc</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Twiddle.py</StartupFile>
+    <StartupFile>Constrained Smoothing.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,6 +28,12 @@
     <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Constrained Smoothing.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cyclic Smoothing.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Implement P Controller.py">
       <SubType>Code</SubType>
     </Compile>

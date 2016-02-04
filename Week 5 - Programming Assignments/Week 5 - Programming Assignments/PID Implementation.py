@@ -177,8 +177,8 @@ def run(param1, param2, param3, color):
 
 plt.show();
 # Call your function with parameters of 0.2 and 3.0 and print results
-run(2.9, 10.3, 0.49, 'b-')
-#run(0.2, 1.0, 'y-')
+#run(2.922681114431696, 10.326751075607085, 0.49327083240278274, 'b-')
+run(0.0, 10.326, 0.49, 'y-')
 #run(0.2, 3.0, 'r-')
 #run(0.2, 5.0, 'g-')
 plt.show()
