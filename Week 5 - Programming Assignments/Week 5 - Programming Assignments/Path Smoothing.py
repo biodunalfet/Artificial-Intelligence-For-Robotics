@@ -15,6 +15,9 @@
 # -----------
 
 from copy import deepcopy
+import matplotlib.pyplot as plt
+#from matplotlib.pyplot import plot, ion, show
+
 
 # thank you to EnTerr for posting this on our discussion forum
 def printpaths(path,newpath):
@@ -33,7 +36,11 @@ path = [[0, 0],
         [4, 3],
         [4, 4]]
 
-def smooth(path, weight_data = 0.5, weight_smooth = 0.1, tolerance = 0.000001):
+def selectColor(x):
+    colors = "roygbv"
+    return colors[x%len(colors)]
+
+def smooth(path, weight_data = 0.9, weight_smooth = 0.3, tolerance = 0.000001):
 
     # Make a deep copy of path into newpath
     newpath = deepcopy(path)
@@ -43,35 +50,43 @@ def smooth(path, weight_data = 0.5, weight_smooth = 0.1, tolerance = 0.000001):
     #######################
     
     cumm_error = 0
-
+    cfc = 0
+    plt.show()
+    plt.axis([-1, 5, -1, 5])
+    plt.plot([x[0] for x in path] , [y[1] for y in path], 'g-')
+    plt.pause(1)
+    
     while True:
         
-        for i in range(0, len(path)):        
-            if i == 0 or i == (len(path) - 1):
-                continue
+        for i in range(1, len(path) -1):
             for j in range(0, len(path[0])):   
             
                 temp = newpath[i][j]
-                y_i_minus = newpath[i - 1][j]
-                y_i_plus = newpath[i + 1][j]
-                y_i = newpath[i][j]
-                x_i = path[i][j]
+                #y_i_minus = newpath[i - 1][j]
+                #y_i_plus = newpath[i + 1][j]
+                #y_i = newpath[i][j]
+                #x_i = path[i][j]
             
             
-                y_i += (weight_data * (x_i - y_i))  
-                y_i += (weight_smooth * (y_i_minus + y_i_plus - (2 * y_i)))
+                #y_i += (weight_data * (x_i - y_i))  
+                #y_i += (weight_smooth * (y_i_minus + y_i_plus - (2 * y_i)))
+                newpath[i][j] += weight_data * (path[i][j] - newpath[i][j]) + \
+                 weight_smooth * (newpath[i-1][j] + newpath[i+1][j] - 2.0 * newpath[i][j])
 
-                cumm_error += abs(temp - y_i)
+                cumm_error += abs(temp - newpath[i][j])
                               
-                newpath[i][j] = y_i 
-            
-           
-        if (cumm_error <= tolerance):
+                #newpath[i][j] = newpath[i][j] 
+        #break
+        if (cumm_error < tolerance):
+            plt.axis([-1, 5, -1, 5])
+            plt.plot([x[0] for x in newpath] , [y[1] for y in newpath], 'ro')
             break
         else:
             cumm_error = 0
     
-    
+        
     return newpath # Leave this line for the grader!
 
+#plt.show()
 printpaths(path,smooth(path))
+plt.show()
