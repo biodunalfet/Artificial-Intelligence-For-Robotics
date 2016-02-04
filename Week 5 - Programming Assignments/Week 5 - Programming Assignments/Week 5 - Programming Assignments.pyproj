@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>152658ea-97a3-4914-988a-6c14fd7f06bc</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Implement P Controller.py</StartupFile>
+    <StartupFile>Twiddle.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -34,7 +34,16 @@
     <Compile Include="Path Smoothing.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="PD Controller.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PID Implementation.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Twiddle.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

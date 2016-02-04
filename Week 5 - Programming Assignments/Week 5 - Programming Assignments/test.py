@@ -8,6 +8,16 @@ plt.show()
 #plt.pause(2)
 
 
+#b: blue
+#g: green
+#r: red
+#c: cyan
+#m: magenta
+#y: yellow
+#k: black
+#w: white
+
+
 index = [0]
 sqrd = [0]
 for i in range(0, 20, 2):
