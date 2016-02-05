@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>152658ea-97a3-4914-988a-6c14fd7f06bc</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Constrained Smoothing.py</StartupFile>
+    <StartupFile>Racetrack Control.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -44,6 +44,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PID Implementation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Racetrack Control.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="test.py">
