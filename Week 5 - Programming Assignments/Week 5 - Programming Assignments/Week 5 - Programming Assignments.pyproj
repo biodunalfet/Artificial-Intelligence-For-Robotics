@@ -5,14 +5,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>152658ea-97a3-4914-988a-6c14fd7f06bc</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Racetrack Control.py</StartupFile>
+    <StartupFile>test.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Week 5 - Programming Assignments</Name>
     <RootNamespace>Week 5 - Programming Assignments</RootNamespace>
-    <InterpreterId>{72fbd606-a786-41a6-837d-b429949be894}</InterpreterId>
+    <InterpreterId>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</InterpreterId>
     <InterpreterVersion>2.7</InterpreterVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -37,6 +37,9 @@
     <Compile Include="Implement P Controller.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="no-pid.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Path Smoothing.py">
       <SubType>Code</SubType>
     </Compile>
@@ -57,6 +60,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\2.7" />
     <InterpreterReference Include="{72fbd606-a786-41a6-837d-b429949be894}\2.7" />
   </ItemGroup>
   <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
