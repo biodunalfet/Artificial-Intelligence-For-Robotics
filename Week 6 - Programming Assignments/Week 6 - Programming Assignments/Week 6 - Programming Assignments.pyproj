@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b438980d-7211-4f38-95f2-e4d51c1b0b8d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Omega and Xi.py</StartupFile>
+    <StartupFile>Expand.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Expand.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Fun with Parameters.py">
       <SubType>Code</SubType>
     </Compile>
