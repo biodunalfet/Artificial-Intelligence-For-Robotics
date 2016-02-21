@@ -601,8 +601,8 @@ def slam(data, N, num_landmarks, motion_noise, measurement_noise):
         u.append([muX.value[i][0]])
         u.append([muY.value[i][0]])
     
-    mu = matrix([[]])
-    mu.value = u
+    mu = matrix(u)
+    #mu.value = u
 
     return mu # Make sure you return mu for grading!
         

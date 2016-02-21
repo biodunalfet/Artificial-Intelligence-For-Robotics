@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b438980d-7211-4f38-95f2-e4d51c1b0b8d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Expand.py</StartupFile>
+    <StartupFile>Implementing SLAM.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,10 +22,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Confident Measurements.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Expand.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Fun with Parameters.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implementing SLAM.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Omega and Xi.py">
