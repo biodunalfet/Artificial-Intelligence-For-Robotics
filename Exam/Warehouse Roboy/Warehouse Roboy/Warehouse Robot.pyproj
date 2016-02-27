@@ -3,15 +3,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>b438980d-7211-4f38-95f2-e4d51c1b0b8d</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
-    <StartupFile>Online SLAM.py</StartupFile>
+    <ProjectGuid>71491ec9-e218-4199-a065-19bb37ce8736</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>Warehouse_Robot.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>Week 6 - Programming Assignments</Name>
-    <RootNamespace>Week 6 - Programming Assignments</RootNamespace>
+    <Name>Warehouse Robot</Name>
+    <RootNamespace>Warehouse Roboy</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,30 +23,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Confident Measurements.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Expand.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Fun with Parameters.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Implementing SLAM %28bcontins%29.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Implementing SLAM.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Omega and Xi.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Online SLAM.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Segmented CTE.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Warehouse_Robot.py" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
