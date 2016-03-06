@@ -75,7 +75,7 @@ def estimate_next_pos(measurement, OTHER = None):
     # You must return xy_estimate (x, y), and OTHER (even if it is None) 
     # in this order for grading purposes.
     
-    #print measurement
+    print measurement
 
     if OTHER == None:
 
@@ -151,29 +151,29 @@ def distance_between(point1, point2):
     x2, y2 = point2
     return sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
 
-## This is here to give you a sense for how we will be running and grading
-## your code. Note that the OTHER variable allows you to store any 
-## information that you want. 
-#def demo_grading(estimate_next_pos_fcn, target_bot, OTHER = None):
-#    localized = False
-#    distance_tolerance = 0.01 * target_bot.distance
-#    ctr = 0
-#    # if you haven't localized the target bot, make a guess about the next
-#    # position, then we move the bot and compare your guess to the true
-#    # next position. When you are close enough, we stop checking.
-#    while not localized and ctr <= 10: 
-#        ctr += 1
-#        measurement = target_bot.sense()
-#        position_guess, OTHER = estimate_next_pos_fcn(measurement, OTHER)
-#        target_bot.move_in_circle()
-#        true_position = (target_bot.x, target_bot.y)
-#        error = distance_between(position_guess, true_position)
-#        if error <= distance_tolerance:
-#            print "You got it right! It took you ", ctr, " steps to localize."
-#            localized = True
-#        if ctr == 10:
-#            print "Sorry, it took you too many steps to localize the target."
-#    return localized
+# This is here to give you a sense for how we will be running and grading
+# your code. Note that the OTHER variable allows you to store any 
+# information that you want. 
+def demo_grading(estimate_next_pos_fcn, target_bot, OTHER = None):
+    localized = False
+    distance_tolerance = 0.01 * target_bot.distance
+    ctr = 0
+    # if you haven't localized the target bot, make a guess about the next
+    # position, then we move the bot and compare your guess to the true
+    # next position. When you are close enough, we stop checking.
+    while not localized and ctr <= 10: 
+        ctr += 1
+        measurement = target_bot.sense()
+        position_guess, OTHER = estimate_next_pos_fcn(measurement, OTHER)
+        target_bot.move_in_circle()
+        true_position = (target_bot.x, target_bot.y)
+        error = distance_between(position_guess, true_position)
+        if error <= distance_tolerance:
+            print "You got it right! It took you ", ctr, " steps to localize."
+            localized = True
+        if ctr == 10:
+            print "Sorry, it took you too many steps to localize the target."
+    return localized
 
 def demo_grading(estimate_next_pos_fcn, target_bot, OTHER = None):
     localized = False
